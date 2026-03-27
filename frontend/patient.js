@@ -27,7 +27,7 @@ function enableEdit() {
 
    });
 
-   alert("You can now edit patient details");
+   message("You can now edit patient details");
 
 }
 
@@ -58,9 +58,9 @@ function deletePatient() {
 
    if (confirmDelete) {
 
-      alert("Patient record deleted");
+      message("Patient record deleted");
 
-      window.location.href = "patient-list.html";
+      window.location.href = "patientlist.html";
 
    }
 

@@ -23,42 +23,46 @@ function validateEmail() {
 }
 
 
-   // SEND OTP (SIMULATION)
+// SEND OTP (REAL BACKEND CALL)
+async function sendOTP() {
+   let email = document.getElementById("email").value;
 
-function sendOTP() {
+   const res = await fetch('/send-otp', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ email })
+   });
 
-   let otp = Math.floor(100000 + Math.random() * 900000);
+   const data = await res.json();
 
-   localStorage.setItem("generatedOTP", otp);
-
-   alert("OTP sent to your email: " + otp);
-
-   document.getElementById("otpSection").style.display = "block";
-
+   if (data.success) {
+      alert("OTP sent to your email!");
+      document.getElementById("otpSection").style.display = "block";
+   } else {
+      alert("Failed to send OTP");
+   }
 }
 
 
    // VERIFY OTP
 
-function verifyOTP() {
-
+async function verifyOTP() {
+   let email = document.getElementById("email").value;
    let enteredOTP = document.getElementById("otp").value;
 
-   let savedOTP = localStorage.getItem("generatedOTP");
+   const res = await fetch('/verify-otp', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ email, otp: enteredOTP })
+   });
 
-   if (enteredOTP === savedOTP) {
-
+   const data = await res.json();
+   if (data.success) {
       alert("OTP Verified Successfully");
-
       document.getElementById("resetSection").style.display = "block";
-
-   }
-   else {
-
+   } else {
       alert("Invalid OTP");
-
    }
-
 }
 
 

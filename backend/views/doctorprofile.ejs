@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Doctor Dashboard</title>
+    <link rel="icon" href="./logo.jpg">
+    <link rel="stylesheet" href="doctorprofile.css">
+</head>
+
+<body>
+
+    <header>
+
+       <div class="navbar">
+  <div class="logo">
+    <img src="logo.jpg" alt="PulmoAi"> <span>PulmoAi</span>
+  </div>
+
+  <div class="hamburger" onclick="toggleMenu()">☰</div>
+
+  <ul id="navLinks">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="add-patient.html">New Patient</a></li>
+    <li><a href="patientlist.html">Patient List</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="contact.html">Contact</a></li>
+    <li><a href="settings.html">Setting</a></li>
+  </ul>
+
+  <button class="login-btn"><a href="doctor.html">My Profile</a></button>
+</div>
+
+    </header>
+
+
+    <!-- NOTIFICATION BOX -->
+
+    <div id="notification"></div>
+
+
+    <!-- PROFILE HEADER -->
+
+    <section class="profile-header">
+
+        <div class="profile-left">
+
+            <h2>Doctor Profile</h2>
+
+            <input class="editable" value="Dr. Raj Sharma" readonly>
+            <input class="editable" value="Pulmonologist | City Hospital" readonly>
+
+            <button onclick="editProfile()">Edit Profile</button>
+            <button onclick="saveProfile()">Save Profile</button>
+
+            <div class="stats">
+
+                <div>
+                    <h2 id="totalPatients">0</h2>
+                    <p>Total Patients</p>
+                </div>
+
+                <div>
+                    <h2 id="totalScans">0</h2>
+                    <p>Scans Analyzed</p>
+                </div>
+
+                <div>
+                    <h2 id="totalReports">0</h2>
+                    <p>Reports Generated</p>
+                </div>
+
+                <div>
+                    <h2 id="pendingReports">0</h2>
+                    <p>Pending Reports</p>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="profile-right">
+
+            <img src="doctor.jpg" alt="Doctor">
+
+            <button onclick="logoutDoctor()" class="logout-btn">Logout</button>
+
+        </div>
+
+    </section>
+
+
+    <!-- DASHBOARD STATS -->
+
+    <section class="dashboard-stats">
+
+        <div class="card">Total Patients <h2 id="totalPatients">2</h2>
+        </div>
+        <div class="card">Total Scans <h2 id="totalScans">4</h2>
+        </div>
+        <div class="card">AI Diagnoses <h2 id="totalReports">2</h2>
+        </div>
+        <div class="card">Pending Reports <h2 id="pendingReports">1</h2>
+        </div>
+
+    </section>
+
+
+    <!-- PATIENT LIST -->
+
+    <section class="patient-section">
+
+        <h2>Patient List</h2>
+
+        <input id="searchPatient" onkeyup="searchPatient()" placeholder="Search Patient">
+
+        <table>
+
+            <tr>
+                <th>Patient Name</th>
+                <th>Age</th>
+                <th>Scan Type</th>
+                <th>Date</th>
+                <th>Status</th>
+                <th>Action</th>
+            </tr>
+
+            <tr>
+                <td>Rahul Shelby</td>
+                <td>45</td>
+                <td>CT Scan</td>
+                <td>12 March</td>
+                <td class="complete">Completed</td>
+                <td>View</td>
+            </tr>
+
+            <tr>
+                <td>Anita Sharma</td>
+                <td>38</td>
+                <td>X-Ray</td>
+                <td>10 january</td>
+                <td class="process">Processing</td>
+                <td>Upload</td>
+            </tr>
+
+        </table>
+
+    </section>
+
+
+    <!-- QUICK SCAN -->
+
+    <section class="quick-scan">
+
+        <h2>Quick Scan Upload</h2>
+
+        <select>
+            <option>Select Patient</option>
+        </select>
+
+        <select>
+            <option>Select Scan Type</option>
+        </select>
+
+        <button class="analyze">Analyze Scan</button>
+
+    </section>
+
+
+    <!-- RESULT SECTION -->
+
+    <section class="results">
+
+        <div class="ai-result">
+
+            <h3>AI Diagnosis Result</h3>
+
+            <p>Findings: Possible Lung Nodule</p>
+            <p>Probability: 92%</p>
+            <p>Suggested Diagnosis: Possible Early Stage Cancer</p>
+
+        </div>
+
+        <div class="history">
+
+            <h3>Patient History</h3>
+
+            <ul>
+                <li>12 May 2026 – CT Scan – Normal</li>
+                <li>10 March 2026 – X-Ray – Pneumonia Detected</li>
+            </ul>
+
+        </div>
+
+    </section>
+
+
+    <!-- ACTIVITY -->
+
+    <section class="activity">
+
+        <h3>Recent Activity</h3>
+
+        <ul>
+            <li>Uploaded Scan for Anita Sharma</li>
+            <li>AI Report generated for Rahul Shelby</li>
+            <li>Analyzed CT Scan for Kamal Verma</li>
+        </ul>
+
+    </section>
+
+
+    <script src="doctorprofile.js"></script>
+
+</body>
+
+</html>

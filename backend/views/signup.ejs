@@ -1,0 +1,132 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body>
+    <div class="w-full h-screen bg-zinc-900">
+
+
+
+
+    </div>
+    
+</body>
+</html> -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doctor Registration - LungAI</title>
+
+    <link rel="stylesheet" href="signup.css">
+
+</head>
+
+<body>
+
+
+    <header>
+
+        <div class="navbar">
+
+            <div class="logo">
+                <img src="logo.jpg" alt="PulmoAi"> <span>PulmoAi</span>
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <!-- SIGNUP SECTION -->
+
+    <section class="signup-section">
+
+        <div class="signup-card">
+
+            <div class="doctor-icon">
+                <img src="signup.jpg" alt="Signup">
+            </div>
+
+            <h1>Doctor Registration</h1>
+
+            <!-- REQUIRED SIGNUP FORM -->
+            <form  method="post" action="/create" >
+
+                <label>Full Name</label>
+                <input name="username" id="name" placeholder="Full Name">
+
+                <label>Email</label>
+                <input name="email" id="email" placeholder="Email">
+
+                <label>Password</label>
+                <input name="password" id="password" type="password" placeholder="Password" onkeyup="checkStrength()">
+
+                <!-- PASSWORD STRENGTH -->
+                <p id="strength"></p>
+
+                <label>Confirm Password</label>
+                <input id="confirmPassword" type="password" placeholder="Confirm Password">
+
+                <!-- SHOW PASSWORD -->
+                <label>
+                    <input type="checkbox" onclick="togglePassword('password')"> Show Password
+                </label>
+
+                <label>
+                    <input type="checkbox" onclick="togglePassword('confirmPassword')"> Show Confirm Password
+                </label>
+
+                <!-- SIGNUP MESSAGE -->
+                <p id="signupMessage"></p>
+
+                <br>
+
+                <button type="submit">Sign Up</button>
+
+                <p class="login-text">
+                    Already have an account? <span><a href="login">Login</a></span>
+                </p>
+
+            </form>
+
+        </div>
+
+    </section>
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <div class="footer-container">
+
+            <div class="footer-left">
+
+                <p>© Copyright LungAI Diagnosis System</p>
+
+                <p class="disclaimer">
+                    Disclaimer info, This system assists doctors in identifying lung diseases faster and improving
+                    diagnosis speed and patient care.
+                </p>
+
+            </div>
+
+            <div class="footer-right">
+                <h4>Quick Links</h4>
+                <p><a href="index.html">Home</a></p>
+            </div>
+
+        </div>
+
+    </footer>
+
+</body>
+
+</html>
