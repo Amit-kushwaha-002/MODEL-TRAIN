@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add New Patient</title>
+
+    <link rel="stylesheet" href="add-patient.css">
+    <link rel="icon" href="/images/logo.jpg">
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+
+    <header>
+
+        <div class="navbar">
+
+            <div class="logo">
+                <img src="/images/logo.jpg" alt="PulmoAi"> <span>PulmoAi</span>
+            </div>
+
+            <button class="logout"> <a href="/doctorProfile">Back</a> </button>
+
+        </div>
+
+    </header>
+
+
+    <!-- MAIN FORM -->
+
+    <section class="container">
+
+        <h1>[Add New Patient]</h1>
+
+        <!-- PATIENT DETAILS -->
+
+        <h2>1. Patient Details</h2>
+        <form id="patientForm" action="/addPatient" method="POST" > 
+                                                                  <!-- enctype="multipart/form-data" -->
+  <label>Patient Name</label>
+  <input type="text" id="name" name="name" placeholder="Patient Name" required>
+
+  <label>Date of Birth</label>
+  <input type="date" name="dob" required>
+
+  <label>Gender</label>
+  <select name="gender" required>
+    <option value="">Select Gender</option>
+    <option>Male</option>
+    <option>Female</option>
+    <option>Other</option>
+  </select>
+
+  <label>Diagnosis</label>
+  <input type="text" name="diagnosis">
+
+  <!-- <label>Scan Upload</label>
+  <input type="file" name="scanImage"> -->
+
+  <button type="submit" class="save-btn">Add Patient</button>
+</form>
+
+
+
+    </section>
+
+
+    <!-- SUCCESS POPUP -->
+
+    <div id="successPopup" class="popup">
+
+        <div class="popup-box">
+
+            <h3>Patient Added Successfully</h3>
+
+            <button onclick="closePopup()">OK</button>
+
+        </div>
+
+    </div>
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <div class="footer">
+
+            <div class="left">
+                <p>© Copyright Early Lung Disease Detection</p>
+
+                <p class="desc">
+                    A machine learning based system for identifying lung diseases earlier,
+                    improving diagnostics and helping deliver better patient care.
+                </p>
+            </div>
+
+            <div class="right">
+                <h4>Quick Links</h4>
+                <p><a href="index.html">Home</a> |
+                    <a href="about.html">About</a>
+                </p>
+            </div>
+
+        </div>
+
+    </footer>
+
+    <!-- JAVASCRIPT -->
+
+    <script src="add-patient.js"></script>
+
+</body>
+
+</html>

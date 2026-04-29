@@ -179,6 +179,7 @@ ul li:hover {
 
 .patient-section {
     margin: 30px;
+   
 }
 
 .patient-section h2 {
@@ -238,11 +239,6 @@ tr:hover {
     align-items: center;
 }
 
-select {
-    padding: 10px;
-    border-radius: 6px;
-    border: 1px solid #ccc;
-}
 
 .analyze {
     background: linear-gradient(135deg, #1f6d95, #4fa3c7);
@@ -307,6 +303,10 @@ select {
 
 .activity li {
     margin-bottom: 8px;
+}
+.table-section{
+    margin: 30px;
+    padding:10px;
 }
 
 /* RESPONSIVE */
@@ -551,3 +551,13 @@ table td:last-child:hover {
     width: 100%;
   }
 }
+.profile-right{
+    display: block;
+}
+@media (max-width:903px){
+
+.profile-right img{
+    display: none;
+}   
+}
+
