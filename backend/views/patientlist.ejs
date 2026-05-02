@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Patients List</title>
+    <link rel="stylesheet" href="patientlist.css">
+    <link rel="stylesheet" href="menu.css">
+    <link rel="icon" href="/images/logo.jpg">
+</head>
+
+<body>
+
+    <div id="notification"></div>
+
+
+
+    <!-- NAVBAR -->
+
+    <header>
+
+       <div class="navbar">
+  <div class="logo">
+    <img src="/images/logo.jpg" alt="PulmoAi"> <span>PulmoAi</span>
+  </div>
+
+  <!-- Hamburger -->
+<div class="hamburger" onclick="toggleMenu()">
+  <span></span>
+  <span></span>
+  <span></span>
+</div>
+
+<!-- Side Menu -->
+<div class="side-menu" id="sideMenu">
+  <div class="close-btn" onclick="toggleMenu()">×</div>
+  <a href="/home">Home</a>
+  <a href="/addPatient">New Patient</a>
+  <a href="/patientlist">Patient List</a>
+  <a href="/about">About</a>
+</div>
+
+<button class="login-btn"><a href="/doctorprofile">My Profile</a></button>
+
+    </header>
+
+    <!-- PAGE TITLE -->
+
+    <section class="page-title">
+
+        <h1>Patient List</h1>
+
+        <div class="search-filter">
+
+            <!-- SEARCH INPUT -->
+            <input id="searchPatient" onkeyup="searchPatient()" placeholder="Search Patient">
+
+            <!-- GENDER FILTER -->
+            <select id="genderFilter" onchange="filterGender()">
+                <option>All</option>
+                <option>Male</option>
+                <option>Female</option>
+            </select>
+
+            <!-- SORT BUTTON -->
+            <button onclick="sortPatients()">Sort by Name</button>
+
+            <button class="add-btn"><a href="/addPatient">+ Add Patient</a></button>
+
+        </div>
+
+    </section>
+
+
+    <!-- PATIENT TABLE -->
+
+    <section class="table-section">
+
+        <table id="patientTable">
+
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Age</th>
+                    <th>Gender</th>
+                    <th>Scan Type</th>
+                    
+                    <th>Action</th>
+                </tr>
+            </thead>
+
+            <tbody>
+
+                <%for(let patient of patients){%>
+                     <tr>
+                         <td> P-<%= patient._id.toString().substring(20,24)%></td>
+                         <td><%= patient.name%></td>
+                            <td><%= patient.age%></td>
+                            <td> <%= patient.gender%> </td>
+                            <td>CT/X RAY</td>
+                        
+                            <td class="action">
+                                 <a class="view" href="/patient">View</a>
+
+                                <form method="post" action="/patientlist/<%=patient._id %>?_method=DELETE">
+                                    <button >Delete</button>
+
+                                </form>
+                            </td>
+                        </tr>
+
+
+                    <%}%>
+                        
+
+                     
+
+            </tbody>
+
+        </table>
+
+    </section>
+    <script src="patientlist.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,15 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", Arial, sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #eef4f7, #dce7ee);
+    color: #333;
+}
+form {
+    background-color: pink;
+    
+}

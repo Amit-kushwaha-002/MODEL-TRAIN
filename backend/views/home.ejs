@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LungAI Diagnosis System</title>
+
+    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="menu.css">
+    <link rel="stylesheet" href="doctorprofile.css">
+    <link rel="icon" href="/images/logo.jpg">
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+
+    <header>
+
+       <div class="navbar">
+  <div class="logo">
+    <img src="/images/logo.jpg" alt="PulmoAi"> <span>PulmoAi</span>
+  </div>
+
+  <!-- Hamburger -->
+<div class="hamburger" onclick="toggleMenu()">
+  <span></span>
+  <span></span>
+  <span></span>
+</div>
+
+<!-- Side Menu -->
+<div class="side-menu" id="sideMenu">
+  <div class="close-btn" onclick="toggleMenu()">×</div>
+  <a href="/home">Home</a>
+  <a href="/addPatient">New Patient</a>
+  <a href="/patientlist">Patient List</a>
+  <a href="/about">About</a>
+</div>
+
+<button class="login-btn"><a href="/doctorprofile">My Profile</a></button>
+
+    </header>
+
+
+
+    <!-- HERO SECTION -->
+
+    <section class="hero">
+
+        <div class="hero-text">
+
+            <h1>AI Powered Early Lung Disease Detection</h1>
+
+            <p>
+                Upload chest X-ray or CT scan to detect early signs
+                of lung disease with advanced AI.
+            </p>
+
+            <div class="hero-buttons">
+                <button class="secondary-btn">View Demo</button>
+            </div>
+
+        </div>
+
+        <div class="hero-image">
+            <img src="/images/main page photo.png" alt="image">
+        </div>
+
+    </section>
+
+
+    <!-- UPLOAD SECTION -->
+
+    <section class="upload">
+
+        <h2>Upload Chest X-Ray / CT Scan</h2>
+
+        <div class="upload-box">
+
+            <p> click on upload button to upload images or file </p>
+
+            <button class="browse-btn"><a href="scan.html">upload</a></button>
+
+            <p class="format">Supported Formats | JPG | PNG | DICOM</p>
+
+        </div>
+
+    </section>
+
+
+    <!-- HOW IT WORKS -->
+
+    <section class="how">
+
+        <h2>How It Works</h2>
+
+        <div class="steps">
+
+            <div class="step">
+                <h3>1</h3>
+                <p>Upload Scan</p>
+            </div>
+
+            <div class="step">
+                <h3>2</h3>
+                <p>AI Processing</p>
+            </div>
+
+            <div class="step">
+                <h3>3</h3>
+                <p>Disease Detection</p>
+            </div>
+
+            <div class="step">
+                <h3>4</h3>
+                <p>Generate Report</p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- PERFORMANCE (COUNTERS ADDED) -->
+
+    <section class="performance">
+
+        <h2>AI Accuracy & Performance</h2>
+
+        <div class="stats">
+
+            <div class="card">
+                <h2 id="patients">0</h2>
+                <p>Patients Analyzed</p>
+            </div>
+
+            <div class="card">
+                <h2 id="scans">0</h2>
+                <p>Scans Processed</p>
+            </div>
+
+            <div class="card">
+                <h2 id="reports">0</h2>
+                <p>Reports Generated</p>
+            </div>
+
+            <div class="card">
+                <h3>94%</h3>
+                <p>Detection Accuracy</p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- FEATURES -->
+
+    <section class="features">
+
+        <h2>Key Features for Doctors</h2>
+
+        <div class="feature-grid">
+
+            <div class="feature reveal">
+                <h4>Early Disease Detection</h4>
+                <p>Identify lung issues early</p>
+            </div>
+
+            <div class="feature reveal">
+                <h4>Detailed AI Reports</h4>
+                <p>Comprehensive diagnostic results</p>
+            </div>
+
+            <div class="feature reveal">
+                <h4>Fast & Reliable</h4>
+                <p>Results within seconds</p>
+            </div>
+
+            <div class="feature reveal">
+                <h4>Secure Data Protection</h4>
+                <p>HIPAA compliant security</p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- IMAGE SLIDER -->
+
+    <section class="slider">
+
+        <h2>AI Scan Examples</h2>
+
+        <div class="slider-container">
+
+            <img class="slide" src="/images/WhatsApp Image 2026-03-16 at 09.39.35.jpeg">
+            <img class="slide" src="/images/WhatsApp Image 2026-03-16 at 09.39.36 (1).jpeg">
+            <img class="slide" src="/images/WhatsApp Image 2026-03-16 at 09.39.36.jpeg">
+
+        </div>
+
+    </section>
+
+
+    <!-- SCROLL ANIMATION SECTION -->
+
+    <section class="info-section">
+
+        <div class="reveal">
+            <h2>Advanced AI Technology</h2>
+            <p>
+                PulmoAI uses deep learning algorithms to detect early lung diseases
+                from X-rays and CT scans with high precision.
+            </p>
+        </div>
+
+        <div class="reveal">
+            <h2>Doctor Friendly Interface</h2>
+            <p>
+                Easy to upload scans, analyze results, and generate medical reports
+                within seconds.
+            </p>
+        </div>
+
+    </section>
+
+
+    <!-- FOOTER CTA -->
+
+    <section class="cta">
+
+        <h2>Start AI-Based Lung Diagnosis Today</h2>
+
+    </section>
+
+
+    <!-- JAVASCRIPT -->
+
+    <script src="home.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doctor Login - LungAI Diagnosis</title>
+
+    <link rel="stylesheet" href="login.css">
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+
+    <header>
+
+        <div class="navbar">
+
+            <div class="logo">
+                <img src="logo.jpg" alt="PulmoAi"> <span>PulmoAi</span>
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <!-- LOGIN CARD -->
+
+    <section class="login-section">
+
+        <div class="login-card">
+
+            <div class="doctor-icon">
+                <img src="login.png" alt="Login">
+            </div>
+
+            <h1>Doctor Login</h1>
+
+            <form onsubmit="return loginUser()">
+
+                <label>Email</label>
+                <input id="email" type="email" placeholder="Email">
+
+                <label>Password</label>
+                <input id="password" type="password" placeholder="Password">
+
+                <label>
+                    <input type="checkbox" onclick="togglePassword()"> Show Password
+                </label>
+
+                <p id="loginMessage"></p>
+
+                <button id="loginBtn" type="submit" class="login-btn"><a href="doctor.html">Login</a> Login</button>
+
+                <p class="forgot"><a href="forgot.html">forgot password</a></p>
+
+                <p class="create">
+                    Don't have an account?
+                    <span><a href="signup.html">Signup</a></span>
+                </p>
+
+            </form>
+
+        </div>
+
+    </section>
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <div class="footer-container">
+
+            <div class="footer-left">
+                <p>© Copyright LungAI Diagnosis System</p>
+
+                <p class="disclaimer">
+                    Disclaimer info, AI tool to assist doctors in identifying lung diseases
+                    safies, Improving diagnosis speed and helping better patient care.
+                </p>
+            </div>
+
+            <div class="footer-right">
+                <h4>Quick Links</h4>
+                <p><a href="index.html">Home</a></p>
+            </div>
+
+        </div>
+
+    </footer>
+
+    <!-- JAVASCRIPT -->
+
+    <script src="login.js"></script>
+
+</body>
+
+</html>

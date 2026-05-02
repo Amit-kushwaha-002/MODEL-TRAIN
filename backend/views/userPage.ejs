@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Doctor Dashboard</title>
+    <link rel="icon" href="/images/logo.jpg">
+    <link rel="stylesheet" href="/doctorprofile.css">
+    <link rel="stylesheet" href="/menu.css">
+</head>
+
+<body>
+
+
+
+
+    <header>
+
+       <div class="navbar">
+  <div class="logo">
+    <img src="/images/logo.jpg" alt="PulmoAi"> <span>PulmoAi</span>
+  </div>
+
+  <!-- Hamburger -->
+<div class="hamburger" onclick="toggleMenu()">
+  <span></span>
+  <span></span>
+  <span></span>
+</div>
+
+<!-- Side Menu -->
+<div class="side-menu" id="sideMenu">
+  <div class="close-btn" onclick="toggleMenu()">×</div>
+  <a href="/home">Home</a>
+  <a href="/addPatient">New Patient</a>
+  <a href="/patientlist">Patient List</a>
+  <a href="/about">About</a>
+</div>
+
+<button class="login-btn"><a href="/doctorprofile">My Profile</a></button>
+
+    </header>
+
+
+    <!-- NOTIFICATION BOX -->
+
+    <div id="notification"></div>
+
+
+    <!-- PROFILE HEADER -->
+
+    <section class="profile-header">
+
+        <div class="profile-left">
+
+            <h2>Doctor Profile</h2>
+            <input class="editable" id="email" name="email"value="<%=user.email%>" readonly>
+            <input class="editable" value="Pulmonologist | City Hospital" readonly>
+
+            <form method="get" action="/doctorProfile/<%=user._id%>/edit" >
+                <button >Edit Profile</button>
+            </form>
+
+            <button onclick="saveProfile()">Save Profile</button>
+
+            <div class="stats">
+
+                <div>
+                    <h2 id="totalPatients">  <%= totalPatients%></h2>
+                    <p>Total Patients</p>
+                </div>
+
+                <div>
+                    <h2 id="totalScans">0</h2>
+                    <p>Scans Analyzed</p>
+                </div>
+
+               
+
+            </div>
+
+        </div>
+
+
+        <div class="profile-right">
+
+            <img src="/images/profilephoto.jpeg" alt="Doctor">
+
+        
+
+
+            <button onclick="logoutDoctor()" class="logout-btn">Logout</button>
+
+        </div>
+
+    </section>
+
+
+    <!-- DASHBOARD STATS -->
+
+    <section class="dashboard-stats">
+
+        <div class="card">Total Patients <h2 id="totalPatients">  <%= totalPatients%> </h2>
+        </div>
+        <div class="card">Total Scans <h2 id="totalScans">4</h2>
+        </div>
+       
+    </section>
+
+
+    <!-- PATIENT LIST -->
+
+      <section class="table-section">
+
+        <table id="patientTable">
+
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Age</th>
+                    <th>Gender</th>
+                    <th>Scan Type</th>
+                    
+                    <th>Action</th>
+                </tr>
+            </thead>
+
+            <tbody>
+
+                <%for(let patient of patients){%>
+                     <tr>
+                         <td> P-<%= patient._id.toString().substring(20,24)%></td>
+                         <td><%= patient.name%></td>
+                            <td><%= patient.age%></td>
+                            <td> <%= patient.gender%> </td>
+                            <td>CT/X RAY</td>
+                        
+                            <td>
+                                <button onclick="viewPatient()">View</button>
+
+                                <form method="post" action="/patientlist/<%=patient._id %>?_method=DELETE">
+                                    <button >Delete</button>
+
+                                </form>
+                            </td>
+                        </tr>
+
+
+                    <%}%>
+                        
+
+                     
+
+            </tbody>
+
+        </table>
+
+    </section>
+
+
+    <!-- QUICK SCAN -->
+
+    <section class="quick-scan">
+
+        <h2>Quick Scan Upload</h2>
+
+        <button class="analyze">Analyze Scan</button>
+
+    </section>
+
+
+    <!-- RESULT SECTION -->
+
+    <section class="results">
+
+        <div class="ai-result">
+
+            <h3>AI Diagnosis Result</h3>
+
+            <p>Findings: Possible Lung Nodule</p>
+            <p>Probability: 92%</p>
+            <p>Suggested Diagnosis: Possible Early Stage Cancer</p>
+
+        </div>
+
+    </section>
+
+
+
+
+    <script src="userpage.js"></script>
+
+</body>
+
+</html>

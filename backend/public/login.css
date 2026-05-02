@@ -1,0 +1,258 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background: linear-gradient(to bottom, #e6f2f5, #d8e7ea);
+    min-height: 100vh;
+}
+
+/* NAVBAR */
+
+header {
+    background: #e9f3f6;
+    padding: 15px 40px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: bold;
+}
+
+.logo img {
+    width: 35px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 25px;
+    list-style: none;
+}
+
+/* LOGIN SECTION */
+
+.login-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 60px 20px;
+}
+
+/* LOGIN CARD */
+
+.login-card {
+    background: linear-gradient(to bottom, #ffffff, #e9f1f3);
+    padding: 40px 60px;
+    border-radius: 12px;
+    width: 500px;
+    text-align: center;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.doctor-icon img {
+    width: 80px;
+    margin-bottom: 10px;
+}
+
+.login-card h1 {
+    margin-bottom: 20px;
+}
+
+/* FORM */
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+label {
+    align-self: flex-start;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    font-weight: 500;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+}
+
+/* BUTTONS */
+
+.login-btn {
+    margin-top: 25px;
+    width: 100%;
+    padding: 12px;
+    background: #2f6f86;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.signup-btn {
+    margin-top: 10px;
+    width: 100%;
+    padding: 12px;
+    background: #4c8da3;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.login-btn:hover,
+.signup-btn:hover {
+    opacity: 0.9;
+}
+
+.forgot {
+    margin-top: 15px;
+    font-size: 14px;
+    color: #555;
+    cursor: pointer;
+}
+
+.create {
+    margin-top: 5px;
+    font-size: 14px;
+}
+
+.create span {
+    color: #2f6f86;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* FOOTER */
+
+footer {
+    margin-top: 80px;
+    background: #e4eef0;
+    padding: 20px 40px;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-left {
+    max-width: 500px;
+    font-size: 13px;
+}
+
+.footer-right {
+    text-align: right;
+}
+
+/* LINKS */
+
+a {
+    text-decoration: none;
+    color: #2f6f86;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* LOGIN MESSAGE */
+
+#loginMessage {
+    margin-top: 10px;
+    font-size: 14px;
+    color: red;
+    text-align: left;
+    width: 100%;
+}
+
+/* SHOW PASSWORD CHECKBOX */
+
+label input[type="checkbox"] {
+    width: auto;
+    margin-right: 5px;
+}
+
+form label:last-of-type {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+/* INPUT FOCUS */
+
+input:focus {
+    outline: none;
+    border: 1px solid #2f6f86;
+    box-shadow: 0 0 4px rgba(47, 111, 134, 0.3);
+}
+
+/* FORGOT PASSWORD */
+
+.forgot a {
+    color: #2f6f86;
+    font-weight: 500;
+}
+
+.forgot a:hover {
+    text-decoration: underline;
+}
+
+/* CREATE ACCOUNT */
+
+.create span a {
+    color: #2f6f86;
+    font-weight: bold;
+}
+
+/* FOOTER LINKS */
+
+.footer-right a {
+    color: #2f6f86;
+    font-weight: 500;
+}
+
+.footer-right a:hover {
+    text-decoration: underline;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:700px) {
+
+    .login-card {
+        width: 90%;
+        padding: 30px;
+    }
+
+    .footer-container {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+    }
+
+    .footer-right {
+        text-align: center;
+    }
+
+}

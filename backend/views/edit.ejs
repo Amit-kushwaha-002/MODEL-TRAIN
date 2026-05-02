@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/doctorProfile.css">
+</head>
+<body>
+    
+
+    <header>
+
+       <div class="navbar">
+  <div class="logo">
+    <img src="/images/logo.jpg" alt="PulmoAi"> <span>PulmoAi</span>
+  </div>
+
+  <div class="hamburger" onclick="toggleMenu()">☰</div>
+
+  <ul id="navLinks">
+    <li><a href="/home">Home</a></li>
+    <li><a href="/addPatient">New Patient</a></li>
+    <li><a href="/patientlist">Patient List</a></li>
+    <li><a href="/about">About</a></li>
+    <li><a href="contact.html">Contact</a></li>
+    <li><a href="settings.html">Setting</a></li>
+  </ul>
+
+  <button class="login-btn"><a href="/doctorprofile">My Profile</a></button>
+</div>
+
+
+
+
+
+
+     <section class="profile-header">
+
+        <div class="profile-left">
+
+            <h2>Doctor Profile</h2>
+
+            <form method="post" action="/doctorProfile/<%=user._id%>?_method=PUT">
+         <input class="editable" type="text" name="email" value="<%=user.email%>" > 
+        <input class="editable" value="Pulmonologist | City Hospital" readonly>
+        <button>edit</button>
+    </form>
+
+        </div>
+
+
+        <div class="profile-right">
+
+            <img src="/images/profilephoto.jpeg" alt="Doctor">
+
+        
+
+
+        </div>
+
+</body>
+</html>

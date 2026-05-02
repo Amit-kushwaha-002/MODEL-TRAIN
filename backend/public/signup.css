@@ -1,0 +1,260 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background: linear-gradient(to bottom, #e8f3f5, #d7e6ea);
+    min-height: 100vh;
+}
+
+/* NAVBAR */
+
+header {
+    background: #e9f3f6;
+    padding: 15px 40px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: bold;
+}
+
+.logo img {
+    width: 35px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 25px;
+    list-style: none;
+}
+
+/* SIGNUP SECTION */
+
+.signup-section {
+    display: flex;
+    justify-content: center;
+    padding: 60px 20px;
+}
+
+/* CARD */
+
+.signup-card {
+    background: linear-gradient(to bottom, #ffffff, #e9f1f3);
+    padding: 40px 60px;
+    border-radius: 12px;
+    width: 520px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    text-align: center;
+}
+
+.doctor-icon img {
+    width: 80px;
+    margin-bottom: 10px;
+}
+
+.signup-card h1 {
+    margin-bottom: 20px;
+}
+
+/* FORM */
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-top: 12px;
+    margin-bottom: 5px;
+    text-align: left;
+    font-weight: 500;
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+}
+
+/* BUTTONS */
+
+.btn-group {
+    margin-top: 20px;
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+}
+
+.create-btn {
+    background: #3a7c8c;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.login-btn {
+    background: #2f6f86;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.create-btn:hover,
+.login-btn:hover {
+    opacity: 0.9;
+}
+
+.login-text {
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+.login-text span {
+    color: #2f6f86;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* FOOTER */
+
+footer {
+    margin-top: 60px;
+    background: #e4eef0;
+    padding: 20px 40px;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-left {
+    max-width: 500px;
+    font-size: 13px;
+}
+
+.footer-right {
+    text-align: right;
+}
+
+/* LINKS */
+
+a {
+    text-decoration: none;
+    color: #2f6f86;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* SIGNUP BUTTON */
+
+.signup-card button {
+    margin-top: 20px;
+    padding: 12px;
+    background: #2f6f86;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 100%;
+}
+
+.signup-card button:hover {
+    opacity: 0.9;
+}
+
+/* PASSWORD STRENGTH */
+
+#strength {
+    font-size: 13px;
+    margin-top: 4px;
+    text-align: left;
+    color: #555;
+}
+
+/* SIGNUP MESSAGE */
+
+#signupMessage {
+    margin-top: 10px;
+    font-size: 14px;
+    color: red;
+    text-align: left;
+}
+
+/* CHECKBOX ALIGNMENT */
+
+label input[type="checkbox"] {
+    width: auto;
+    margin-right: 6px;
+}
+
+form label:nth-of-type(5),
+form label:nth-of-type(6) {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+}
+
+/* INPUT FOCUS */
+
+input:focus {
+    outline: none;
+    border: 1px solid #2f6f86;
+    box-shadow: 0 0 4px rgba(47, 111, 134, 0.3);
+}
+
+/* FOOTER LINKS */
+
+.footer-right a {
+    color: #2f6f86;
+    font-weight: 500;
+}
+
+.footer-right a:hover {
+    text-decoration: underline;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:700px) {
+
+    .signup-card {
+        width: 90%;
+        padding: 30px;
+    }
+
+    .footer-container {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+    }
+
+    .footer-right {
+        text-align: center;
+    }
+
+}

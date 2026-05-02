@@ -1,16 +1,36 @@
 {
   "name": "backend",
   "version": "1.0.0",
+<<<<<<< HEAD
   "description": "",
+=======
+>>>>>>> origin/main
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+<<<<<<< HEAD
   "keywords": [],
   "author": "",
   "license": "ISC",
   "type": "commonjs",
   "dependencies": {
+=======
+  "author": "Anish Patil",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "bcrypt": "^6.0.0",
+    "cookie-parser": "^1.4.7",
+    "cors": "^2.8.6",
+    "ejs": "^5.0.1",
+    "express": "^5.2.1",
+    "jsonwebtoken": "^9.0.3",
+    "method-override": "^3.0.0",
+    "mongoose": "^9.3.2",
+    "multer": "^2.1.1",
+    "mysql2": "^3.20.0",
+>>>>>>> origin/main
     "nodemon": "^3.1.14"
   }
 }

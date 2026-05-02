@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Upload Scan</title>
+    <link rel="stylesheet" href="scan.css">
+</head>
+
+<body>
+
+    <div id="notification"></div>
+
+    <script src="scan.js"></script>
+
+    <header>
+        <div class="navbar">
+
+            <div class="logo">
+                <img src="logo.jpg" alt="PulmoAi">
+                <h2>PulmoAi</h2>
+            </div>
+
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="add-patient.html">New Patient</a></li>
+                <li><a href="patientlist.html">Patient List</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="settings.html">Setting</a></li>
+            </ul>
+
+            <button class="login-btn">My profile</button>
+
+        </div>
+    </header>
+
+
+    <section class="upload-container">
+
+        <h1>Upload Patient Scan</h1>
+
+        <div class="upload-box">
+
+            <label>Patient ID</label>
+            <input type="text" placeholder="Enter Patient ID">
+
+            <label>Select Scan Type</label>
+            <select>
+                <option>CT Scan</option>
+                <option>X-Ray</option>
+                <option></option>
+            </select>
+
+            <label>Upload Scan Image</label>
+
+            <!-- FILE UPLOAD -->
+            <input type="file" id="scanFile" accept="image/*" onchange="previewScan(event)">
+
+            <!-- IMAGE PREVIEW -->
+            <img id="scanPreview" style="display:none; width:200px;">
+
+            <br><br>
+
+            <!-- UPLOAD BUTTONS -->
+            <button onclick="uploadScan()">Upload & Scan</button>
+            <button onclick="removeFile()">Remove</button>
+
+            <!-- PROGRESS BAR -->
+            <div class="progress-bar">
+                <div id="uploadProgress"></div>
+            </div>
+
+            <!-- AI LOADER -->
+            <div id="aiLoader" style="display:none">
+                Analyzing Lung Scan...
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <section class="result-section">
+
+        <h2>AI Analysis Result</h2>
+
+        <div class="result-box">
+
+            <p id="scanResult" style="display:none"></p>
+
+            <p><b>Finding:</b> </p>
+            <p><b>Probability:</b> </p>
+            <p><b>Risk Level:</b> </p>
+            <p><b>Suggested Diagnosis:</b> </p>
+
+        </div>
+
+    </section>
+
+</body>
+
+</html>
